@@ -106,4 +106,3 @@ if (username) {
 } else {
   document.getElementById('username-display').textContent = 'Guest';
 }
-

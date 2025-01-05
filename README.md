@@ -28,26 +28,3 @@ A&G E-Commerce is a responsive and interactive e-commerce platform that allows u
    ```bash
    git clone https://github.com/ragayathri97/deployJsonUsingGlitch.git
 
-
-AG-Fashion-store/
-├── index.html              # Main homepage
-├── sale.html               # Sale page
-├── men.html                # Men's product page
-├── ladies.html             # Ladies' product page
-├── kids.html               # Kids' product page
-├── scripts/
-│   ├── app.js              # Main JavaScript logic
-│   ├── cart.js             # Cart-related functions
-│   ├── product.js          # Fetch and display product details
-├── styles/
-│   ├── styles.css          # Global styles
-│   ├── responsive.css      # Responsive design
-├── images/
-│   ├── logo-ag.png         # Logo for the website
-│   ├── default.jpg         # Placeholder for missing images
-│   ├── products/
-│       ├── 1.jpg           # Product image for product ID 1
-│       ├── 2.jpg           # Product image for product ID 2
-├── README.md               # Documentation
-├── package.json            # Dependencies (if using Node.js)
-└── .gitignore 

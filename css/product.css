@@ -37,7 +37,9 @@
     object-fit: contain;
     border-radius: 4px;
   }
-  
+  .product-details{
+    margin-top: 20px;
+  }
   .product-details h3 {
     font-size: 1.2em;
     margin-bottom: 10px;
@@ -58,3 +60,21 @@
   .pageheader{
     padding: 10px 30px;
   }
+
+
+  @media (max-width: 1200px) {
+    .product-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 991px) {
+
+  .product-image {
+    height: 150px;
+  }
+}
+@media (max-width: 767px) {
+  .product-container {
+    grid-template-columns: 1fr;
+}
+}

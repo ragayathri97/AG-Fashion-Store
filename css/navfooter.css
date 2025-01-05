@@ -1,9 +1,8 @@
-General Styles
-body {
+* {
+  box-sizing: border-box;
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 .flex-element {
@@ -256,22 +255,47 @@ text-align: center;
   }
 }
 
+@media(max-width:1380px){
+  .signin {
+    left: 385px;
+  }
+}
+
+
 /* Styles for screens smaller than 1200px */
 @media (max-width: 1200px) {
   .container {
     padding: 0 15px;
   }
-
-  .footer-list > div {
-    width: 45%; /* Adjust footer sections to two columns */
+  .corporate ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
   }
 
+  .footer-list>div {
+    width: 100%;
+  }
   #header nav ul {
-    gap: 30px; /* Reduce spacing between nav links */
-  }
+max-width: 500px;
+margin: 0 auto;
+justify-content: space-around;
 
+}
+.logo img{
+  margin: 0px;
+}
+.flex-element {
+  gap: 10px;
+}
   .signin {
-    left: 400px; /* Adjust position for smaller screens */
+    display: none;
+  }
+  .fnav{
+    display: none;
+  }
+  .logo{
+    text-align: center;
   }
 }
 
@@ -281,27 +305,13 @@ text-align: center;
     flex-direction: column; /* Stack elements vertically */
     align-items: flex-start;
   }
-
-  #header nav ul {
-    flex-direction: column;
-    gap: 20px; /* Stack navigation links vertically */
-  }
-
-  .signin {
-    position: static; /* Adjust position for better alignment */
-    margin: 20px 0;
-    text-align: center;
-  }
-
-  .footer-list > div {
-    width: 100%; /* Stack footer sections */
-    text-align: center;
-  }
-
   .welcome {
     font-size: 24px;
     text-align: center;
   }
+#header{
+  position: static;
+}
 }
 
 /* Styles for screens smaller than 767px */
@@ -310,18 +320,18 @@ text-align: center;
     width: 100%;
     padding: 0 10px;
   }
-
   .logo img {
-    margin: 20px auto; /* Center the logo */
-  }
+    margin: 10px auto;
+}
 
   #header nav ul {
-    text-align: center; /* Center navigation links */
+    text-align: center; 
+  }
+  
+  .welcome {
+display: none;
   }
 
-  .footer-list > div {
-    margin-bottom: 20px; /* Add spacing between footer sections */
-  }
 }
 
 /* Styles for screens smaller than 576px */
@@ -329,35 +339,17 @@ text-align: center;
   body {
     font-size: 14px; /* Reduce font size for smaller devices */
   }
-
-  .welcome {
-    font-size: 20px;
-  }
-
-  .signin {
-    font-size: 14px; /* Adjust font size for signin links */
-  }
+  .corporate ul {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
 }
-
+.footer-list p{
+  margin-top: 5px;
+}
 /* Styles for screens smaller than 480px */
 @media (max-width: 480px) {
   #header nav ul {
     gap: 10px; /* Reduce spacing between nav links */
   }
-
-  .footer-list > div {
-    width: 100%;
-  }
-
-  .welcome {
-    font-size: 18px;
-  }
-
-  .logo img {
-    max-width: 50px;
-  }
-
-  .signin {
-    margin-top: 10px;
-  }
 } 
+}

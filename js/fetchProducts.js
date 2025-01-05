@@ -17,9 +17,9 @@ async function fetchProducts(endpoint, containerId) {
       productCard.classList.add("product-card");
 
       // Construct image URL based on the local 'images' folder
-      const imageUrl = `images/${product.id}.jpg`; // Use product ID to create image path
+      const imageUrl = `images/${product.id}.jpg`; 
 
-      console.log("Image URL:", imageUrl); // Debugging line
+      console.log("Image URL:", imageUrl); 
 
       // Populate product card with details
       productCard.innerHTML = `
