@@ -11,11 +11,13 @@
   align-items: center;
   justify-content: space-between;
 }
-.content-width{
+
+.content-width {
   max-width: 1100px;
   margin: 0 auto;
   padding: 40px 0;
 }
+
 .container {
   width: 90%;
   max-width: 1200px;
@@ -44,34 +46,38 @@
   display: inline;
 }
 
-#header nav ul li a,.signin {
+#header nav ul li a,
+.signin {
   color: #972c85;
   text-decoration: none;
   font-size: 18px;
   font-weight: bold;
   text-shadow: 1px 1px 5px #7f767c;
 }
+
 #header nav ul li a:hover {
-border-bottom: 1px solid #af309a;
+  border-bottom: 1px solid #af309a;
 }
+
 /* signin */
 .signin {
   position: relative;
   top: 0px;
   left: 485px;
 }
-.signin a{
+
+.signin a {
   text-decoration: none;
   padding: 0 10px;
 }
 
-.welcome{
+.welcome {
   font-size: 30px;
-  padding-right:30px;
-margin-top: 25px;
-position: fixed;
-top: 95px;
-right: 0;
+  padding-right: 30px;
+  margin-top: 25px;
+  position: fixed;
+  top: 95px;
+  right: 0;
 }
 
 /* Footer Styles */
@@ -101,43 +107,53 @@ right: 0;
   list-style: none;
   margin: 0 0 10px;
 }
-.fnav li{
-  display:block;
+
+.fnav li {
+  display: block;
 }
+
 .fnav a,
 .corporate a {
   text-decoration: none;
 }
 
-.corporate h3,.fnav h3{
+.corporate h3,
+.fnav h3 {
   margin-bottom: 15px;
 }
-.footer-list.flex-element{
+
+.footer-list.flex-element {
   align-items: normal;
 }
-.footer-list{
+
+.footer-list {
   max-width: 900px;
   margin: 0 auto;
 }
+
 .footer-list>div {
   width: 30%;
 }
+
 .logo img {
   max-width: 70px;
   margin: 54px 0 55px 158px;
 }
-.logo-header img{
+
+.logo-header img {
   max-width: 65px;
   margin: 0 auto;
 }
-.logo-header{
+
+.logo-header {
   max-width: 100px;
   margin: 0 auto;
 }
+
 .list-drop {
-  display: none; 
+  display: none;
   position: absolute;
-  top: 100%; 
+  top: 100%;
   left: 0;
   background: #fff;
   border: 1px solid #ccc;
@@ -146,24 +162,25 @@ right: 0;
 }
 
 .list-drop a {
-  display: block; 
+  display: block;
   margin: 5px 0;
   text-decoration: none;
   color: black;
 }
 
 .list-drop a:hover {
-  color: #007BFF; 
+  color: #007BFF;
 }
+
 .container ul li:hover .list-drop {
-  display: block; 
+  display: block;
 }
 
 /* Style for the dropdown container */
 nav ul li {
-  position: relative; 
-  display: inline-block; 
-  margin:10px;
+  position: relative;
+  display: inline-block;
+  margin: 10px;
 }
 
 nav .dropdown {
@@ -171,8 +188,8 @@ nav .dropdown {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #fff; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   white-space: nowrap;
 }
@@ -181,11 +198,11 @@ nav .dropdown ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: flex; 
+  display: flex;
 }
 
 nav .dropdown ul li {
-  display: inline-block; 
+  display: inline-block;
 }
 
 nav .dropdown ul li a {
@@ -197,38 +214,39 @@ nav .dropdown ul li a {
 }
 
 nav .dropdown ul li a:hover {
-  background-color: #f5f5f5; 
+  background-color: #f5f5f5;
 }
 
 nav ul li:hover .dropdown {
-  display: block; 
+  display: block;
 }
 
-.dropdown ul li:hover > a {
-  color: white; 
+.dropdown ul li:hover>a {
+  color: white;
 }
 
 
-.subproducts{
-max-width: 600px;
-margin: 0 auto;
-text-align: center;
+.subproducts {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
 }
 
-.subproducts>a{
+.subproducts>a {
   margin: 0 25px;
   text-decoration: none;
   color: #750161;
   font-weight: bold;
   font-size: 18px;
 }
-.pageheader a{
+
+.pageheader a {
   float: right;
   text-decoration: none;
   font-weight: bold;
   padding: 10px 30px;
   background-color: rgb(213, 173, 250);
-  
+
 }
 
 
@@ -243,7 +261,8 @@ text-align: center;
   }
 
   .flex-element {
-    gap: 30px; /* Reduce spacing between flex elements */
+    gap: 30px;
+    /* Reduce spacing between flex elements */
   }
 
   .welcome {
@@ -255,7 +274,7 @@ text-align: center;
   }
 }
 
-@media(max-width:1380px){
+@media(max-width:1380px) {
   .signin {
     left: 385px;
   }
@@ -267,6 +286,7 @@ text-align: center;
   .container {
     padding: 0 15px;
   }
+
   .corporate ul {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -276,25 +296,31 @@ text-align: center;
   .footer-list>div {
     width: 100%;
   }
-  #header nav ul {
-max-width: 500px;
-margin: 0 auto;
-justify-content: space-around;
 
-}
-.logo img{
-  margin: 0px;
-}
-.flex-element {
-  gap: 10px;
-}
+  #header nav ul {
+    max-width: 500px;
+    margin: 0 auto;
+    justify-content: space-around;
+
+  }
+
+  .logo img {
+    margin: 0px;
+  }
+
+  .flex-element {
+    gap: 10px;
+  }
+
   .signin {
     display: none;
   }
-  .fnav{
+
+  .fnav {
     display: none;
   }
-  .logo{
+
+  .logo {
     text-align: center;
   }
 }
@@ -302,16 +328,25 @@ justify-content: space-around;
 /* Styles for screens smaller than 991px */
 @media (max-width: 991px) {
   .flex-element {
-    flex-direction: column; /* Stack elements vertically */
+    flex-direction: column;
+    /* Stack elements vertically */
     align-items: flex-start;
   }
+
   .welcome {
     font-size: 24px;
     text-align: center;
   }
-#header{
-  position: static;
+
+  #header {
+    position: static;
+  }
 }
+
+@media (max-width:930px) {
+  .welcome {
+    display: none;
+  }
 }
 
 /* Styles for screens smaller than 767px */
@@ -320,36 +355,60 @@ justify-content: space-around;
     width: 100%;
     padding: 0 10px;
   }
+
   .logo img {
     margin: 10px auto;
-}
+  }
 
   #header nav ul {
-    text-align: center; 
+    text-align: center;
   }
-  
-  .welcome {
-display: none;
-  }
+
 
 }
 
 /* Styles for screens smaller than 576px */
 @media (max-width: 576px) {
   body {
-    font-size: 14px; /* Reduce font size for smaller devices */
+    font-size: 14px;
+    /* Reduce font size for smaller devices */
   }
+
   .corporate ul {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-list p {
+    margin-top: 5px;
+  }
+
+  .pageheader a {
+    padding: 10px 20px;
+  }
+
+  #search-bar {
+    width: 70%;
+  }
+
+  #autocomplete-list {
+    border: none;
+  }
 }
-.footer-list p{
-  margin-top: 5px;
-}
+
+
 /* Styles for screens smaller than 480px */
 @media (max-width: 480px) {
   #header nav ul {
-    gap: 10px; /* Reduce spacing between nav links */
+    gap: 10px;
+    /* Reduce spacing between nav links */
   }
-} 
+
+  nav ul li {
+    margin: 10px;
+  }
+
+  .pageheader a {
+    padding: 10px;
+  }
 }

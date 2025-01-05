@@ -21,10 +21,16 @@ const searchBoxHTML = `
       { name: 'Ladies', link: 'ladies.html' },
       { name: 'Ladies Dress', link: 'w-dress.html' },
       { name: 'Ladies Bags', link: 'bags.html' },
+      { name: 'Accessories', link: 'accessories.html' },
       { name: 'Kids', link: 'kids.html' },
       { name: 'Kids Shirt', link: 'kids-shirt.html' },
       { name: 'Kids Shorts', link: 'kids-shorts.html' },
       { name: 'Toys', link: 'toys.html' },
+      { name: 'About Us', link: 'about.html' },
+      { name: 'Contact Us', link: 'about.html' },
+      { name: 'Payment', link: 'payment.html' },
+      { name: 'Sustainability', link: 'sustainability.html' },
+      { name: 'Signup', link: 'index.html' },
     ];
 
     // Show autocomplete suggestions

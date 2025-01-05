@@ -43,10 +43,6 @@
   background-color: #0056b3;
 }
 
-
-
-/* form */
-
 /* General form styling */
 form {
   width: 100%;
@@ -100,7 +96,7 @@ form button:hover {
 /* Headings */
 h2, h1{
   max-width: 400px;
-  margin: 10px auto;
+  margin: 15px auto;
   text-align: center;
   font-family: 'Arial', sans-serif;
   color: purple;

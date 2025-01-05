@@ -12,12 +12,11 @@ async function fetchProductDetails(productId, category) {
   }
 }
 
-// Display the cart items
 async function displayCart() {
   const cart = JSON.parse(localStorage.getItem('cart')) || [];
   const cartContainer = document.getElementById('cart-container');
-  overallTotal = 0; // Reset the overall total
-  cartContainer.innerHTML = ''; // Clear existing cart content
+  overallTotal = 0; 
+  cartContainer.innerHTML = ''; 
 
   if (cart.length === 0) {
     cartContainer.innerHTML = '<p>Your cart is empty!</p>';
@@ -26,7 +25,7 @@ async function displayCart() {
   }
 
   for (const item of cart) {
-    const category = item.category || 'men'; // Default to 'men' if no category is provided
+    const category = item.category || 'men'; 
     const product = await fetchProductDetails(item.productId, category);
 
     if (!product) continue;

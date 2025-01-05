@@ -45,7 +45,7 @@ body {
 
 .section {
     max-width: 650px;
-    margin: 0 auto;
+    margin: 40px auto;
     padding: 0 25px;
     text-align: center;
 }
@@ -82,6 +82,8 @@ body {
 .sectioncollection h3{
     text-align: center;
     font-size: 30px;
+    margin: 0 0 15px;
+    color: #750161;
 
 }
 /* about end */
