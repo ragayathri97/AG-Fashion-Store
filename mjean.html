@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mjean</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/navfooter.css">
+    <link rel="stylesheet" href="./css/product.css">
+  <script src="./js/fetchProducts.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      fetchProducts('mjean', 'product-container');
+    });
+  </script>
+
+</head>  
+<body>
+    
+    <div id="header"></div>
+    <header class="pageheader">
+      <nav class="subproducts">
+        <ul>
+          <li><a href='tshirt.html'>T-shirt</a> </li>
+          <li><a href='mjean.html'>Jeans</a></li>
+          <li><a href='shirt.html'>Shirt</a></li>
+          <li><a href='belts.html'>Belts</a></li>
+        </ul>
+      </nav>
+      <a href="cart.html">Go to Cart</a>
+  </header>
+  <main id="product-container"></main>
+
+
+    <div id="footer"></div>
+
+    <script src="./js/navfooter.js" type="module"></script>
+</body>
+</html>

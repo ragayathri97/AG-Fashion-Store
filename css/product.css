@@ -1,0 +1,60 @@
+/* CSS file (styles.css) */
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px;
+  }
+  
+  .product-card {
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px;
+    padding: 16px;
+    text-align: center;
+    box-sizing: border-box;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .product-image {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+  }
+  
+  .product-image img {
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 4px;
+  }
+  
+  .product-details h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .product-details p {
+    margin: 5px 0;
+  }
+  
+  .product-details button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .pageheader{
+    padding: 10px 30px;
+  }

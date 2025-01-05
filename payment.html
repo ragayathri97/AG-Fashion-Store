@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Page</title>
+  <link rel="stylesheet" href="./css/navfooter.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+
+    .paymentcontainer {
+      max-width: 600px;
+      margin: 50px auto;
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    label {
+      font-size: 14px;
+      color: #555;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #4CAF50;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .summary {
+      margin-bottom: 20px;
+      padding: 15px;
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .error {
+      color: red;
+      font-size: 14px;
+      display: none;
+    }
+
+    .success {
+      display: none;
+      color: green;
+      font-size: 16px;
+      text-align: center;
+    }
+    #success{
+      margin-top: 15px;
+    }
+    
+    
+  </style>
+  <script>
+    function validateAndPay() {
+      const name = document.getElementById('name').value.trim();
+      const cardNumber = document.getElementById('cardNumber').value.trim();
+      const expiry = document.getElementById('expiry').value.trim();
+      const cvv = document.getElementById('cvv').value.trim();
+      const address = document.getElementById('address').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const errorElement = document.getElementById('error');
+      const successElement = document.getElementById('success');
+
+      // Basic validation
+      if (!name || !cardNumber || !expiry || !cvv || !address || !email || !phone) {
+        errorElement.style.display = 'block';
+        errorElement.textContent = 'Please fill in all fields.';
+        return false;
+      }
+
+      if (!/^\d{16}$/.test(cardNumber)) {
+        errorElement.style.display = 'block';
+        errorElement.textContent = 'Invalid card number. It must be 16 digits.';
+        return false;
+      }
+
+      if (!/^\d{3}$/.test(cvv)) {
+        errorElement.style.display = 'block';
+        errorElement.textContent = 'Invalid CVV. It must be 3 digits.';
+        return false;
+      }
+
+      if (!/\S+@\S+\.\S+/.test(email)) {
+        errorElement.style.display = 'block';
+        errorElement.textContent = 'Please enter a valid email address.';
+        return false;
+      }
+
+      if (!/^\d{10}$/.test(phone)) {
+        errorElement.style.display = 'block';
+        errorElement.textContent = 'Invalid phone number. It must be 10 digits.';
+        return false;
+      }
+
+      // Clear errors and show success
+      errorElement.style.display = 'none';
+      successElement.style.display = 'block';
+      successElement.textContent = 'Payment successful! Thank you for your purchase.';
+
+      // Simulate sending a message (email and SMS)
+      sendMessage(email, phone);
+      return false; // Prevent form submission for demo
+    }
+
+    function sendMessage(email, phone) {
+      // Simulating sending an email and SMS
+      console.log(`Sending email to: ${email}`);
+      console.log(`Sending SMS to: ${phone}`);
+      alert(`A confirmation message has been sent to ${email} and ${phone}.`);
+    }
+  </script>
+</head>
+<body>
+
+  <div id="header"></div> 
+
+  <div class="paymentcontainer">
+    <h1>Payment Page</h1>
+    <div class="summary">
+      <p><strong>Order Total:</strong> $200.00</p>
+      <p><strong>Discount Applied:</strong> $20.00</p>
+      <p><strong>Amount Payable:</strong> $180.00</p>
+    </div>
+    <form onsubmit="return validateAndPay()">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" placeholder="Enter your full name">
+      
+      <label for="address">Address</label>
+      <input type="text" id="address" placeholder="Enter your address">
+      
+      <label for="email">Email Address</label>
+      <input type="email" id="email" placeholder="Enter your email address">
+      
+      <label for="phone">Phone Number</label>
+      <input type="text" id="phone" placeholder="Enter your phone number (10 digits)">
+      
+      <label for="cardNumber">Card Number</label>
+      <input type="text" id="cardNumber" placeholder="Enter your 16-digit card number">
+      
+      <label for="expiry">Expiry Date (MM/YY)</label>
+      <input type="text" id="expiry" placeholder="MM/YY">
+      
+      <label for="cvv">CVV</label>
+      <input type="text" id="cvv" placeholder="Enter CVV">
+      
+      <button type="submit">Pay Now</button>
+      <div class="error" id="error"></div>
+      <div class="success" id="success"></div>
+    </form>
+  </div>
+  
+  <div id="footer"></div>
+
+  <script src="./js/navfooter.js" type="module"></script>  
+
+</body>
+</html>

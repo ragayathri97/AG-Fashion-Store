@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Contact Us Page</title>
+  <script src="https://kit.fontawesome.com/c32adfdcda.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./css/contact.css">
+  <style>
+    .feedback-message {
+      margin-top: 10px;
+      color: green;
+      font-size: 16px;
+      display: none; 
+    }
+  </style>
+</head>
+<body>
+  
+  <section>
+    <a href="sale.html"><img class="back" src="./images/Go back.png" alt="go back"></a>
+    <div class="section-header">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <p>We'd love to hear from you! Whether you have questions about our latest collections,
+           need help with an order, or want to provide feedback, our team is here to assist you.</p>
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="row">
+        
+        <div class="contact-info">
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <i class="fas fa-home"></i>
+            </div>
+            
+            <div class="contact-info-content">
+              <h4>Address</h4>
+              <p>2121 AG Fashion Road, <br/> Chennai <br/>603202</p>
+            </div>
+          </div>
+          
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            
+            <div class="contact-info-content">
+              <h4>Phone</h4>
+              <p>571-457-2321</p>
+            </div>
+          </div>
+          
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            
+            <div class="contact-info-content">
+              <h4>Email</h4>
+             <p>agfashion@gmail.com</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-form">
+          <form action="" id="contact-form">
+            <h2>Send Message</h2>
+            <div class="input-box">
+              <input type="text" required="true" name="">
+              <span>Full Name</span>
+            </div>
+            
+            <div class="input-box">
+              <input type="email" required="true" name="">
+              <span>Email</span>
+            </div>
+            
+            <div class="input-box">
+              <textarea required="true" name=""></textarea>
+              <span>Type your Message...</span>
+            </div>
+            
+            <div class="input-box">
+              <input type="submit" value="Send" />
+            </div>
+          </form>
+          <!-- Feedback message -->
+          <div id="feedback-message" class="feedback-message">
+            Thanks for your feedback!
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const form = document.getElementById('contact-form');
+    const feedbackMessage = document.getElementById('feedback-message');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); 
+      feedbackMessage.style.display = 'block';
+    });
+  </script>
+  
+</body>
+</html>

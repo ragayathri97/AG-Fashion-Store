@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Cart</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/cart.css">
+  <link rel="stylesheet" href="./css/navfooter.css">
+</head>
+<body>
+  <div id="header"></div>
+
+  <h1>Your Cart</h1>
+  <a href="men.html">Back to Products</a>
+
+  <main id="cart-container"></main>
+
+  <div id="coupon-section">
+    <input type="text" id="couponCode" placeholder="Enter coupon code">
+    <button onclick="applyCoupon()">Apply Coupon</button>
+    <p id="discountMessage"></p>
+  </div>
+
+  <div class="payment">
+    <a href="payment.html">Proceed to Payment</a>
+  </div>
+
+  <div id="footer"></div>
+
+  <script>
+    // Load header and footer dynamically
+    document.getElementById('header').innerHTML = '<header>Header content</header>';
+    document.getElementById('footer').innerHTML = '<footer>Footer content</footer>';
+  </script>
+
+  <script src="./js/navfooter.js" type="module"></script>
+  <script src="./js/cart.js" defer></script>
+  <script src="./js/fetchProducts.js" type="module"></script>
+</body>
+</html>
