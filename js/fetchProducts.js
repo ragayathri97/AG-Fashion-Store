@@ -16,12 +16,10 @@ async function fetchProducts(endpoint, containerId) {
       const productCard = document.createElement('div');
       productCard.classList.add("product-card");
 
-      // Construct image URL based on the local 'images' folder
       const imageUrl = `images/${product.id}.jpg`; 
 
       console.log("Image URL:", imageUrl); 
 
-      // Populate product card with details
       productCard.innerHTML = `
         <div class="product-image">
           <img src="${imageUrl}" alt="${product.title}" onerror="this.onerror=null; this.src='./images/default.jpg';">
@@ -34,8 +32,6 @@ async function fetchProducts(endpoint, containerId) {
           <button onclick="addToCart(${product.id})">Add to Cart</button>
         </div>
       `;
-
-      // Append product card to the container
       container.appendChild(productCard);
     });
     
@@ -43,17 +39,16 @@ async function fetchProducts(endpoint, containerId) {
     console.error('Error fetching products:', error);
   }
 }
-function addToCart(productId) {
+function addToCart(productId, category) {
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
   const existingProduct = cart.find(item => item.productId === productId);
 
   if (existingProduct) {
     existingProduct.quantity += 1;
   } else {
-    cart.push({ productId, quantity: 1 });
+    cart.push({ productId, category, quantity: 1 }); 
   }
 
   localStorage.setItem('cart', JSON.stringify(cart));
-
   alert("Product added to cart!");
 }

@@ -1,6 +1,4 @@
 let overallTotal = 0;
-
-// Fetch product details from the appropriate API endpoint based on category
 async function fetchProductDetails(productId, category) {
   try {
     const response = await fetch(`https://faceted-daily-timimus.glitch.me/${category}-products/${productId}`);
