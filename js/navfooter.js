@@ -100,9 +100,22 @@ function getQueryParam(param) {
   const urlParams = new URLSearchParams(window.location.search);
   return urlParams.get(param);
 }
-const username = getQueryParam('username'); // Get username from URL
+const username = getQueryParam('username');
 if (username) {
   document.getElementById('username-display').textContent = username;
 } else {
   document.getElementById('username-display').textContent = 'Guest';
 }
+
+// Add username as a query parameter to all internal links
+const storedUsername = getQueryParam('username') || localStorage.getItem('username') || 'Guest';
+document.querySelectorAll('a').forEach(link => {
+  const url = new URL(link.href, window.location.origin);
+  if (!url.searchParams.has('username') && storedUsername !== 'Guest') {
+    url.searchParams.set('username', storedUsername);
+    link.href = url.toString();
+  }
+});
+
+// Display username
+document.getElementById('username-display').textContent = storedUsername;

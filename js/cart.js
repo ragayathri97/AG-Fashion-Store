@@ -13,8 +13,8 @@ async function fetchProductDetails(productId, category) {
 async function displayCart() {
   const cart = JSON.parse(localStorage.getItem('cart')) || [];
   const cartContainer = document.getElementById('cart-container');
-  overallTotal = 0; 
-  cartContainer.innerHTML = ''; 
+  overallTotal = 0;
+  cartContainer.innerHTML = '';
 
   if (cart.length === 0) {
     cartContainer.innerHTML = '<p>Your cart is empty!</p>';
@@ -61,7 +61,7 @@ async function displayCart() {
   updateOverallTotal();
 }
 
-// Update the overall total in the DOM
+
 function updateOverallTotal() {
   let overallTotalElement = document.getElementById('overall-total');
   if (!overallTotalElement) {

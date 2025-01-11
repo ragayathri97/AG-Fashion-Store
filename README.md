@@ -79,3 +79,4 @@ Removes a product from the cart and updates the display.
 3. Commit your changes (`git commit -am 'Add feature'`).
 4. Push to the branch (`git push origin feature-name`).
 5. Create a new Pull Request.
+   
